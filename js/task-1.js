@@ -1,14 +1,5 @@
 function slugify(title) {
-  let newTitle = '';
-  for (const el of title) {
-    if (el === ' ') {
-      newTitle += `-${el}`;
-    } else {
-      newTitle += el;
-    }
-  }
-  return newTitle;
-  // return title.toLowerCase().replaceAll(' ', '-');
+  return title.toLowerCase().replaceAll(' ', '-');
 }
 console.log(slugify('Arrays for begginers')); // "arrays-for-begginers"
 console.log(slugify('English for developer')); // "english-for-developer"
